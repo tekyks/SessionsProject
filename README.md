@@ -1,4 +1,4 @@
-# Training Project Repository
+# Session Project Repository
 
 This Repository is having all the projects as per the sessions.
 
