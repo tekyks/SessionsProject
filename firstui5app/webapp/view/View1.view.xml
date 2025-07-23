@@ -1,0 +1,82 @@
+<mvc:View controllerName="com.test.firstui5app.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page1" title="First APP changed">
+        <VBox id="idVbox1">           
+            <Label id="idLabel" text="Name" />
+            <Input id="idInput" placeholder="{i18n>inputname}"/>
+            <Button id="idSubmit" icon="sap-icon://status-positive" text="Submit" press="onPressSubmit"/>
+            <Text id="idText1" text="-------------------------------------------------------"/>
+            <!-- <Input id="idID" value="{empmodel>/employee/id}"/>
+            <Input id="idName" value="{empmodel>/employee/name}"/> -->
+            <Input id="idID" value="{/employee/id}"/>
+            <Input id="idName" value="{/employee/name}"/>
+            <Text id="idText2" text="-------------------------------------------------------"/>
+
+            <!-- <VBox binding="{/employee}">
+                <Text text="{id}"/>
+                <Text text="{name}"/>
+                <Text text="{department}"/>
+                <Text text="{designation}"/>
+            </VBox> -->
+
+            <VBox binding="{empmodel>/employee}">
+                <Text text="{empmodel>id}"/>
+                <Text text="{empmodel>name}"/>
+                <Text text="{empmodel>department}"/>
+                <Text text="{empmodel>designation}"/>
+            </VBox>
+
+            <Text text="-------------------------------------------------------"/>
+            <!-- <VBox>
+                <List headerText="Employee List" items="{emplistmodel>/employees}">
+                    <items>
+                        <StandardListItem title="{emplistmodel>name}" info="{emplistmodel>salary}"/>
+                    </items>   
+                </List>
+            </VBox> -->
+            <VBox>
+                <List headerText="Employee List" items="{/employees}"> 
+                    <items>
+                        <StandardListItem title="{name}" info="{salary}"/>
+                    </items>   
+                </List>
+            </VBox>
+
+        </VBox>
+    </Page>
+</mvc:View>
+
+
+<!-- <View controllerName="com.test.firstui5app.controller.View1"
+    xmlns="sap.ui.core.mvc"
+    xmlns:monkey="sap.m">
+    <monkey:Page id="page1" title="First APP changed">
+        <monkey:VBox id="idVbox1">           
+            <monkey:Label id="idLabel" text="Name" />
+            <monkey:Input id="idInput" placeholder="Enter your name" />
+            <monkey:Button id="idSubmit" text="Submit" press="onPressSubmit"/>
+        </monkey:VBox>
+    </monkey:Page>
+</View> -->
+
+
+
+
+
+
+<!-- <Button id="idBtn1" text="Click Me" press="onPressClickMe" />   
+        <Button id="idBtn2" text="Click Me 2" press="onPressClickMe" /> 
+        <Text id="idText" text="This is my first UI5 code"/>  
+        <CheckBox id="idCheckBox" text="Please confirm, if you are agree with above statements?" />
+        <Switch id="idSwitch" type="AcceptReject" state="true">
+            <layoutData>
+                <FlexItemData id="id1" growFactor="1" />
+            </layoutData>
+		</Switch>
+        <DatePicker
+					id="DP1"
+					placeholder="Enter Date"
+					change="handleChange"
+					class="sapUiSmallMarginBottom"/> -->
+

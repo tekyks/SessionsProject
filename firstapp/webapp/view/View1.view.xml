@@ -1,0 +1,20 @@
+<mvc:View controllerName="com.test.firstapp.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Label id="idLabel" text="Name" />
+        <Input id='idName' placeholder="Enter your name"/>
+        <Label id="idLabel2" text="Department" />
+        <Input id='idDepartment' placeholder="Enter your department"/>
+        <VBox id="vbox1">
+            <Text id="idText" text="Please select some options"/>
+            <HBox id="hbox1">
+                <Button id="idButton" text="Submit" press="onPressClickSubmit"/>
+                <Button id="idButton2" text="Clear" press="onPressClickClear"/>
+            </HBox>      
+        </VBox>
+        
+    </Page>
+</mvc:View>
+
+
