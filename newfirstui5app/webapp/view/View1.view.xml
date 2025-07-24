@@ -1,7 +1,7 @@
 <mvc:View controllerName="newfirstui5app.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-
+    <Page id="page" title="First UI5 App">
+        <Button id="id1" text="First Button"/>
     </Page>
 </mvc:View>
