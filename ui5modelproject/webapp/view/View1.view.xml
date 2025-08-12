@@ -1,0 +1,48 @@
+<mvc:View controllerName="ui5modelproject.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <VBox>
+            <Input placeholder="Name" value="{/employee/name}"/>
+            <Input placeholder="Emp Id" value="{/employee/id}"/>
+            <Input placeholder="Designation" value="{/employee/designation}"/>
+            <Input placeholder="Department" value="{/employee/department}"/>
+            <Text text = "---------------------------------------------"/>
+        </VBox>
+
+
+        <VBox>
+        <Text text = "---------------Student------------------------------"/>
+            <Input placeholder="Name" value="{studentmodel>/student/name}"/>
+            <Input placeholder="Sudent Id" value="{studentmodel>/student/id}"/>
+            <Input placeholder="Class" value="{studentmodel>/student/class}"/>
+            <Input placeholder="Section" value="{studentmodel>/student/section}"/>
+            <Input placeholder="address" value="{studentmodel>/student/address/street}"/>
+            <Text text = "---------------------------------------------"/>
+            <Text text = "---------------Student Element------------------------------"/>
+        </VBox>
+
+        
+
+        <VBox binding="{studentmodel>/student}" >
+            <Input placeholder="Name" value="{studentmodelname}"/>
+            <Input placeholder="Sudent Id" value="{studentmodel>id}"/>
+            <Input placeholder="Class" value="{studentmodel>class}"/>
+            <Input placeholder="Section" value="{studentmodel>section}"/>
+            <Text text = "---------------------------------------------"/>
+            <Text text = "---------------------------------------------"/>
+            <Text text = "---------------Employee Element------------------------------"/>
+        </VBox>
+
+
+        <VBox binding="{/employee}">
+            <Input placeholder="Name" value="{name}"/>
+            <Input placeholder="Emp Id" value="{id}"/>
+            <Input placeholder="Designation" value="{designation}"/>
+            <Input placeholder="Department" value="{department}"/>
+            <Text text = "---------------------------------------------"/>
+        </VBox>
+
+
+    </Page>
+</mvc:View>

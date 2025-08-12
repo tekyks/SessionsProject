@@ -9,28 +9,28 @@ sap.ui.define(
       onInit() {
         //this will always be called first time, when application gets loaded.
         //the use of this life cycle event is to initialize the data
-        alert('I am inside init event');
+        //alert('I am inside init event');
       },
 
       //Life cycle event - 2
       onBeforeRendering() {
         //just before loading of UI element this life cycle event will be called.
         //the use if this event is to change the behaviour of some of the UI element based on customer need.
-        alert('I am inside onBeforeRendering');
+        //alert('I am inside onBeforeRendering');
       },
 
       //Life cycle event - 3
       onAfterRendering() {
         //just After loading of UI element this life cycle event will be called.
         //the use if this event is to change the some logic which are depenedent on UI element.
-        alert('I am inside onAfterRendering');
+        //alert('I am inside onAfterRendering');
       },
 
       //Life cycle event - 4
       onExit() {
         //whenever you are going to comeout of your application, this will be called
         //the use if this event is clear some data or close somen database connection.
-        alert('I am inside on exit');
+        //alert('I am inside on exit');
       },
 
       onButtonClick: function () {
@@ -38,7 +38,7 @@ sap.ui.define(
         let userInput = this.getView().byId('idName');
         let enteredName = userInput.getValue();
         if (enteredName === '') {
-          MessageToast.show('Please eneter your name first bedore submitting');
+          MessageToast.show('Please eneter your name first before submitting');
         } else {
           MessageToast.show(`Your eneterd name is ${enteredName}`);
         }
