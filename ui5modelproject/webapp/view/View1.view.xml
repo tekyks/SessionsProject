@@ -2,7 +2,21 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
+
         <VBox>
+        <Text text = "{i18n>msg1way2Waybinding}"/>
+            <Input placeholder="Name" value="{/employee/name}"/>
+            <Text text="{/employee/name}" />
+
+
+
+        </VBox>
+
+
+
+        <VBox>
+        <Text text = "---------------------------------------------"/>
+        <Text text = "---------------------------------------------"/>
             <Input placeholder="Name" value="{/employee/name}"/>
             <Input placeholder="Emp Id" value="{/employee/id}"/>
             <Input placeholder="Designation" value="{/employee/designation}"/>
@@ -25,7 +39,7 @@
         
 
         <VBox binding="{studentmodel>/student}" >
-            <Input placeholder="Name" value="{studentmodelname}"/>
+            <Input placeholder="Name" value="{studentmodel>name}"/>
             <Input placeholder="Sudent Id" value="{studentmodel>id}"/>
             <Input placeholder="Class" value="{studentmodel>class}"/>
             <Input placeholder="Section" value="{studentmodel>section}"/>
@@ -41,6 +55,16 @@
             <Input placeholder="Designation" value="{designation}"/>
             <Input placeholder="Department" value="{department}"/>
             <Text text = "---------------------------------------------"/>
+            <Text text = "-------------List Example:Aggregation Binding-------------------"/>
+            
+        </VBox>
+
+        <VBox >
+            <List headerText="Employee List" items="{emplistmodel>/employees}">
+                <items>
+                    <StandardListItem title="{emplistmodel>name}" info="{= ${emplistmodel>salary} &lt; 25000 ? 'Less Salary Employee' : 'High Salary Employee'  }"/>
+                </items>
+            </List>
         </VBox>
 
 
