@@ -1,0 +1,34 @@
+{
+    "employees": [
+        {
+            "id": 1001,
+            "name": "John",
+            "salary": 10000,
+            "department": "IT"
+        },
+        {
+            "id": 1002,
+            "name": "Jane",
+            "salary": 15000,
+            "department": "Infra"
+        },
+        {
+            "id": 1003,
+            "name": "Robert",
+            "salary": 20000,
+            "department": "IT"
+        },
+        {
+            "id": 1004,
+            "name": "Michael",
+            "salary": 25000,
+            "department": "HR"
+        },
+        {
+            "id": 1005,
+            "name": "Tom",
+            "salary": 8000,
+            "department": "IT"
+        }
+    ]
+}

@@ -9,11 +9,11 @@ sap.ui.define(
 
     return Controller.extend('ui5modelproject.controller.View1', {
       onInit() {
-        //step 1 - lets first create some dummy/demo data - employee data
+        //step 1 - lets first create some dummy/demo data - employee data // {key:value} // [{},{},{}]
         let jsonEmployeeData = {
           employee: {
             id: '1001',
-            name: 'Krishna changed value',
+            name: 'Krishna',
             designation: 'Manager',
             department: 'IT',
           },
@@ -34,6 +34,7 @@ sap.ui.define(
           student: {
             address: {
               street: 100,
+              zipcode: '456789',
             },
             id: '1001',
             name: 'David Goggins',
@@ -47,7 +48,7 @@ sap.ui.define(
         this.getView().setModel(jStudentModel, 'studentmodel'); //named model
 
         //-----------------------------------
-        //lets create json object which holds more than 1 employee - demo data
+        //lets create json object which holds more than 1 employee - demo data  // [{},{},{}]
         let empListJSONData = {
           employees: [
             {
@@ -95,9 +96,9 @@ sap.ui.define(
           ],
         };
 
-        let jEmpListModel = new JSONModel(empListJSONData);
+        //let jEmpListModel = new JSONModel(empListJSONData);
 
-        this.getView().setModel(jEmpListModel, 'emplistmodel'); //named model
+        //this.getView().setModel(jEmpListModel, 'emplistmodel'); //named model
       },
     });
   }

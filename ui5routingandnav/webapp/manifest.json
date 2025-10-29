@@ -1,7 +1,7 @@
 {
     "_version": "1.65.0",
     "sap.app": {
-        "id": "com.test.firstapp2",
+        "id": "ui5routingandnav",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
@@ -13,7 +13,7 @@
         "sourceTemplate": {
             "id": "@sap/generator-fiori:basic",
             "version": "1.15.6",
-            "toolsId": "81aedb4c-a59b-42d2-af4e-7844f6dd9bee"
+            "toolsId": "8bb70f16-7102-48c4-bf25-78acf51a3ade"
         }
     },
     "sap.ui": {
@@ -33,9 +33,9 @@
         }
     },
     "sap.ui5": {
-        "flexEnabled": true,
+        "flexEnabled": false,
         "dependencies": {
-            "minUI5Version": "1.136.1",
+            "minUI5Version": "1.141.3",
             "libs": {
                 "sap.m": {},
                 "sap.ui.core": {}
@@ -49,7 +49,7 @@
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                    "bundleName": "com.test.firstapp2.i18n.i18n"
+                    "bundleName": "ui5routingandnav.i18n.i18n"
                 }
             }
         },
@@ -68,28 +68,35 @@
                 "transition": "slide",
                 "type": "View",
                 "viewType": "XML",
-                "path": "com.test.firstapp2.view",
+                "path": "ui5routingandnav.view",
                 "async": true,
-                "viewPath": "com.test.firstapp2.view"
+                "viewPath": "ui5routingandnav.view"
             },
             "routes": [
                 {
-                    "name": "RouteView1",
-                    "pattern": "",
-                    "target": [
-                        "TargetView1"
-                    ]
+                    "name": "route_name_view1",
+                    "target": "target_view1",
+                    "pattern": ""
+                },
+                {
+                    "name": "route_name_view2",
+                    "target": "target_view2",
+                    "pattern": "PatternView2"
                 }
             ],
             "targets": {
-                "TargetView1": {
+                "target_view1": {
                     "id": "View1",
                     "name": "View1"
+                },
+                "target_view2": {
+                    "id": "View2",
+                    "name": "View2"
                 }
             }
         },
         "rootView": {
-            "viewName": "com.test.firstapp2.view.App",
+            "viewName": "ui5routingandnav.view.App",
             "type": "XML",
             "id": "App"
         }

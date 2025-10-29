@@ -33,7 +33,7 @@
         }
     },
     "sap.ui5": {
-        "flexEnabled": true,
+        "flexEnabled": false,
         "dependencies": {
             "minUI5Version": "1.139.0",
             "libs": {
@@ -46,6 +46,10 @@
             "cozy": true
         },
         "models": {
+            "emplistmodel": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "./model/data.json"
+            },
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
